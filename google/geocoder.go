@@ -52,7 +52,7 @@ func getURL(apiKey string, baseURLs ...string) string {
 	if len(baseURLs) > 0 {
 		return baseURLs[0]
 	}
-	return fmt.Sprintf("https://maps.googleapis.com/maps/api/geocode/json?key=%s&", apiKey)
+	return fmt.Sprintf("https://maps.googleapis.com/maps/api/geocode/json?language=ru&region=RU&key=%s&", apiKey)
 }
 
 func (b baseURL) GeocodeURL(address string) string { return string(b) + "address=" + address }
